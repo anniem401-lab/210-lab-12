@@ -36,18 +36,29 @@ int main()
 
     inputFile.close(); // Closes the file
 
+    cout.setf(ios::fixed|ios::showpoint); // Sets the output format to fixed-point notation
+    cout.precision(1); // Sets the precision to 1 decimal place
+
     double average = accumulate(temperatures.begin(), temperatures.end(), 0.0) / DAYS_IN_MONTH; // Calculates average temperature
     double highest = *max_element(temperatures.begin(), temperatures.end()); // Finds highest temperature
     double lowest = *min_element(temperatures.begin(), temperatures.end()); // Finds lowest temperature
 
+
     // Displays the results
     cout << endl;
-    cout << "Temperatures for the month:" << endl;
-    cout << "---------------------------" << endl;
-    cout << "Average temperature: " << average << endl;
-    cout << "Highest temperature: " << highest << endl;
-    cout << "Lowest temperature: " << lowest << endl;
+    cout << "Display of information:" << endl;
+    cout << "------------------------" << endl;
+    cout << "1. Is the array empty? " << (temperatures.empty() ? "Yes" : "No") << endl; // Checks if the array is empty
+    cout << "2. Average temperature: " << average << endl; // Average calculated by accumulate() function
+    cout << "3. Highest temperature: " << highest << endl; // Highest calculated by max_element() function
+    cout << "4. Lowest temperature: " << lowest << endl; // Lowest calculated by min_element() function
+    cout << "5. Day 15 temperature: " << temperatures[14] << endl; // Accessing the 15th day temperature (index 14)
+    cout << "6. Address of the array: " << temperatures.data() << endl; // Address of the array
+    cout << "7. Size of the array: " << temperatures.size() << endl; // Size of the array
+    cout << "8. First element: " << temperatures.front() << endl; // First element of the array
+    cout << "9. Last element: " << temperatures.back() << endl; // Last element of the array
     cout << endl;
 
     return 0;
 }
+
