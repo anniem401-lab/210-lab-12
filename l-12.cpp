@@ -56,8 +56,11 @@ int main()
     cout << "7. Size of the array: " << temperatures.size() << endl; // Size of the array
     cout << "8. First element: " << temperatures.front() << "°F" << endl; // First element of the array
     cout << "9. Last element: " << temperatures.back() << "°F" << endl; // Last element of the array
+    
+    sort(temperatures.begin(), temperatures.end()); // Sorts the array in ascending order
+    cout << "10. Sorted temperatures: ";
+    for (double temp : temperatures) cout << temp << "°F  "; cout << endl; // Displays all temperatures sorted in the array
     cout << endl;
 
     return 0;
 }
-
