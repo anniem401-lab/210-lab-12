@@ -2,7 +2,7 @@
 // IDE used: Visual Studio Code
 
 // Real-world simulation: This program will simulate daily temperatures for a month (30 days).
-// It read 30 temperatures from a file, store them in an STD::array, 
+// It will read 30 temperatures from a file, store them in an STD::array, 
 // and calculate the average, highest, and lowest temperatures for the month.
 
 // Header files
@@ -43,20 +43,19 @@ int main()
     double highest = *max_element(temperatures.begin(), temperatures.end()); // Finds highest temperature
     double lowest = *min_element(temperatures.begin(), temperatures.end()); // Finds lowest temperature
 
-
     // Displays the results
     cout << endl;
-    cout << "Display of information:" << endl;
+    cout << "Display of temperatures:" << endl;
     cout << "------------------------" << endl;
     cout << "1. Is the array empty? " << (temperatures.empty() ? "Yes" : "No") << endl; // Checks if the array is empty
-    cout << "2. Average temperature: " << average << endl; // Average calculated by accumulate() function
-    cout << "3. Highest temperature: " << highest << endl; // Highest calculated by max_element() function
-    cout << "4. Lowest temperature: " << lowest << endl; // Lowest calculated by min_element() function
-    cout << "5. Day 15 temperature: " << temperatures[14] << endl; // Accessing the 15th day temperature (index 14)
+    cout << "2. Average temperature: " << average << "°F" << endl; // Average calculated by accumulate() function
+    cout << "3. Highest temperature: " << highest << "°F" << endl; // Highest calculated by max_element() function
+    cout << "4. Lowest temperature: " << lowest << "°F" << endl; // Lowest calculated by min_element() function
+    cout << "5. Day 15 temperature: " << temperatures[14] << "°F" << endl; // Accessing the 15th day temperature (index 14)
     cout << "6. Address of the array: " << temperatures.data() << endl; // Address of the array
     cout << "7. Size of the array: " << temperatures.size() << endl; // Size of the array
-    cout << "8. First element: " << temperatures.front() << endl; // First element of the array
-    cout << "9. Last element: " << temperatures.back() << endl; // Last element of the array
+    cout << "8. First element: " << temperatures.front() << "°F" << endl; // First element of the array
+    cout << "9. Last element: " << temperatures.back() << "°F" << endl; // Last element of the array
     cout << endl;
 
     return 0;
